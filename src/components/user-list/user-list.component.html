@@ -1,0 +1,18 @@
+<div class="user-list__container">
+
+    <div [ngStyle]="{'border': '1px', 'width': '350px', 'height': '350px', 'background': 'red'}"
+         changeColor
+    >
+        Тест директивы
+    </div>
+
+   <div class="user-list__search">
+       <input placeholder="Поиск" [(ngModel)]="valueFilter">
+   </div>
+    <br>
+    <ng-container *ngFor="let user of users | filter: valueFilter">
+        <div [ngStyle]="{'margin-bottom': '20px', 'border': 'thick double #32a1ce', 'width': '350px', 'padding': '16px'}">
+            <user-card [user]="user"></user-card>
+        </div>
+    </ng-container>
+</div>
