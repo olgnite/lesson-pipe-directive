@@ -1,11 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { IUser } from "../../interfaces/user.interface";
+import { LessonService } from '../../services/lesson.service';
 
 @Component({
     selector: 'user-list',
     templateUrl: './user-list.component.html',
 })
 export class UserListComponent {
+
+    public colors: string[] = ['red', 'black', 'green', 'yellow', 'blue'];
+
+    constructor(
+        private lessonService: LessonService
+    ) {
+        this.lessonService.print('Hello!');
+    }
 
     public valueFilter: string = '';
 

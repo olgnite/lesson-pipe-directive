@@ -5,13 +5,16 @@ import { UserListComponent } from './user-list/user-list.component';
 import { SearchPipe } from "../pipes/search.pipe";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ChangeColorDirective } from "../directives/change-color.directive";
+import { RandomColorDirective } from '../directives/random-color.directive';
+import { LessonService } from '../services/lesson.service';
 
 @NgModule({
     declarations: [
         UserCardComponent,
         UserListComponent,
         SearchPipe,
-        ChangeColorDirective
+        ChangeColorDirective,
+        RandomColorDirective,
     ],
     imports: [
         CommonModule,
@@ -19,7 +22,7 @@ import { ChangeColorDirective } from "../directives/change-color.directive";
         ReactiveFormsModule
     ],
     providers: [
-
+        LessonService
     ]
 })
 export class ComponentsModule {

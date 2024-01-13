@@ -1,9 +1,11 @@
 <div class="user-list__container">
 
-    <div [ngStyle]="{'border': '1px', 'width': '350px', 'height': '350px', 'background': 'red'}"
-         changeColor
+    <div 
+    class="random" 
+    [ngStyle]="{'border': '1px', 'width': '350px', 'height': '350px', 'background': 'red'}"
+    [randomColor]="colors"
     >
-        Тест директивы
+        Рандомный цвет
     </div>
 
    <div class="user-list__search">
